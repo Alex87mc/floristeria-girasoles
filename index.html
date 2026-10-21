@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floristería Girasoles | Catálogo Digital</title>
+    <!-- Tipografías elegantes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="navbar">
+        <div class="contenedor nav-contenido">
+            <a href="#" class="logo">🌻 Floristería<span>Girasoles</span></a>
+            <nav class="nav-enlaces">
+                <a href="#catalogo">Catálogo</a>
+                <a href="#personalizados">Personalizados</a>
+                <a href="#informacion">Envíos</a>
+                <a href="#ubicacion">Ubicación y Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PORTADA PRINCIPAL (HERO) -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="contenedor hero-contenido">
+            <span class="hero-subtitulo">Flores frescas todos los días</span>
+            <h1>Expresa lo que sientes con el detalle perfecto</h1>
+            <p>Explora nuestro catálogo de ramos y arreglos florales. Haz tu pedido directo por WhatsApp o visítanos en nuestra sucursal.</p>
+            <a href="#catalogo" class="btn-principal">Ver Catálogo de Flores</a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DEL CATÁLOGO -->
+    <section id="catalogo" class="seccion-catalogo contenedor">
+        <div class="encabezado-seccion">
+            <h2>Nuestro Catálogo</h2>
+            <p>Toca cualquier ramo para ver qué flores lleva y su descripción completa</p>
+        </div>
+
+        <!-- Botones de Filtro por Categoría -->
+        <div class="filtros-contenedor">
+            <button class="btn-filtro activo" data-categoria="todos">Todos (30)</button>
+            <button class="btn-filtro" data-categoria="amor">Amor y Aniversario</button>
+            <button class="btn-filtro" data-categoria="cumpleanos">Cumpleaños</button>
+            <button class="btn-filtro" data-categoria="buchones">Ramos Buchones</button>
+            <button class="btn-filtro" data-categoria="especiales">Girasoles y Tulipanes</button>
+            <button class="btn-filtro" data-categoria="condolencias">Condolencias</button>
+        </div>
+
+        <!-- Cuadrícula donde JavaScript dibujará los 30 ramos automáticamente -->
+        <div id="catalogo-grid" class="catalogo-grid"></div>
+    </section>
+
+    <!-- BANNER DE RAMOS PERSONALIZADOS -->
+    <section id="personalizados" class="banner-personalizado">
+        <div class="contenedor banner-contenido">
+            <div class="banner-texto">
+                <h2>¿No ves lo que buscas o tienes un presupuesto específico?</h2>
+                <p>Armamos tu ramo a tu medida. Dinos qué flores te gustan o cuánto deseas gastar y nosotros diseñamos algo especial para ti.</p>
+            </div>
+            <a href="#" id="btn-whatsapp-personalizado" target="_blank" class="btn-whatsapp-grande">
+                Cotizar Ramo Personalizado
+            </a>
+        </div>
+    </section>
+
+    <!-- INFORMACIÓN DE ENVÍOS Y HORARIOS -->
+    <section id="informacion" class="seccion-info contenedor">
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-icono">🕒</div>
+                <h3>Horarios de Atención</h3>
+                <p>Lunes a Sábado: 8:00 AM - 8:00 PM<br>Domingos: 9:00 AM - 3:00 PM</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icono">🛵</div>
+                <h3>Envíos a Domicilio</h3>
+                <p>Entregas el mismo día pidiendo con al menos 2 horas de anticipación. Incluye tarjeta con dedicatoria gratis.</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icono">💳</div>
+                <h3>Métodos de Pago</h3>
+                <p>Aceptamos pagos en efectivo en tienda, transferencia bancaria y depósito en OXXO.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACIÓN Y CONTACTO -->
+    <section id="ubicacion" class="seccion-ubicacion">
+        <div class="contenedor">
+            <div class="encabezado-seccion">
+                <h2>Visítanos o Llámanos</h2>
+                <p>Estamos listos para atenderte en nuestra florería o por teléfono</p>
+            </div>
+
+            <div class="contacto-panel">
+                <div class="contacto-datos">
+                    <h3>📍 Dirección de la Florería</h3>
+                    <p id="texto-direccion">Av. Principal #123, Col. Centro (Frente al Parque Central)</p>
+                    <p class="contacto-nota">Haz clic en cualquiera de los botones de abajo para abrir la ruta en tu celular o llamarnos directamente:</p>
+
+                    <div class="botones-ubicacion">
+                        <!-- Botón con Logo de Google Maps -->
+                        <a href="#" id="btn-google-maps" target="_blank" class="btn-maps">
+                            <svg class="icono-svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 1.74.5 3.37 1.41 4.84.95 1.54 2.2 2.86 3.16 4.4.47.75.81 1.45 1.17 2.26.26.55.47 1.5 1.26 1.5s1-.95 1.25-1.5c.37-.81.7-1.51 1.17-2.26.96-1.53 2.21-2.85 3.16-4.4C18.5 12.37 19 10.74 19 9c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+                            </svg>
+                            Ver ubicación en Google Maps
+                        </a>
+
+                        <!-- Botón para Llamar por Teléfono -->
+                        <a href="#" id="btn-llamar" class="btn-llamar">
+                            <svg class="icono-svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            Llamar a la Florería: <span id="numero-visible"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p>© 2026 Floristería Girasoles. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- VENTANA EMERGENTE (MODAL) PARA VER DETALLES DEL RAMO -->
+    <div id="modal-ramo" class="modal-fondo">
+        <div class="modal-contenido">
+            <button id="cerrar-modal" class="modal-cerrar" aria-label="Cerrar">&times;</button>
+            <div class="modal-cuerpo">
+                <div class="modal-imagen-contenedor">
+                    <span id="modal-etiqueta" class="etiqueta-ramo"></span>
+                    <img id="modal-img" src="" alt="Foto del ramo">
+                </div>
+                <div class="modal-info">
+                    <span id="modal-categoria" class="modal-cat-texto"></span>
+                    <h2 id="modal-titulo">Nombre del Ramo</h2>
+                    <p id="modal-precio" class="modal-precio">$0 MXN</p>
+                    
+                    <div class="modal-seccion">
+                        <h4>Descripción:</h4>
+                        <p id="modal-descripcion"></p>
+                    </div>
+
+                    <div class="modal-seccion">
+                        <h4>🌸 ¿Qué flores incluye?</h4>
+                        <ul id="modal-flores" class="lista-flores"></ul>
+                    </div>
+
+                    <a href="#" id="modal-btn-whatsapp" target="_blank" class="btn-whatsapp-modal">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.126.556 4.122 1.529 5.854l-1.529 5.581 5.716-1.499c1.693.923 3.631 1.449 5.698 1.449 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/>
+                        </svg>
+                        Pedir este ramo por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP ("PREGUNTAS ACÁ") -->
+    <a href="#" id="btn-whatsapp-flotante" target="_blank" class="whatsapp-flotante">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.126.556 4.122 1.529 5.854l-1.529 5.581 5.716-1.499c1.693.923 3.631 1.449 5.698 1.449 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/>
+        </svg>
+        <span>¿Preguntas? Escríbenos acá</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
